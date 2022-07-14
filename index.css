@@ -8,3 +8,42 @@
 body {
     min-height: 100vh;
 }
+
+header {
+    height: 15vh;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+#header-content {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 25% 61% 14%;
+    height: 100%;
+    width: 100%;
+}
+
+#header-logo {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+#header-navigation {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+#header-access-services {
+    height: 100%;
+    width: 100%;
+}
+
+main {
+    height: 75vh;
+}
+
+footer {
+    height: 15vh;
+}
