@@ -62,17 +62,50 @@ header {
     padding: 0.8% 2.9%;
 }
 
-.content {
-    display: block;
-    flex: 1;
-}
-
 main {
     display: flex;
     flex-direction: column;
     margin: 8% 11%;
     background-color: white;
-    min-height: 400vh;
+    height: 350vh;
+}
+
+.main-section {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.main-content-titles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+}
+
+.titles {
+    font-size: 35px;
+}
+
+.main-content {
+    display: grid;
+    flex: 1;
+    place-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.main-content-texts {
+
+}
+
+.main-content-texts {
+     display: flex;
+}
+
+.main-content-images {
+    width: 70%;
+    height: 84%;
 }
 
 footer {
