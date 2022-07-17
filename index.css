@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+/*Base config*/
 * {
     margin: 0;
     box-sizing: border-box;
@@ -10,9 +11,10 @@ body {
     min-height: 100vh;
 }
 
+/*Header Config*/
 header {
     background-color: white;
-    height: 15vh;
+    height: 18vh;
     padding-left: 1.5%;
     padding-right: 1.5%;
 }
@@ -67,6 +69,7 @@ header {
     padding: 0.8% 2.9%;
 }
 
+/*Main Config*/
 main {
     display: flex;
     flex-direction: column;
@@ -75,16 +78,15 @@ main {
     height: 400vh;
 }
 
+/*Sections content*/
 #main-section {
     display: flex;
     flex-direction: column;
-    flex: 1;
+    height: 18%;
 }
 
-#main-section-two {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
+#main-section-whoweare {
+    height: 33%;
 }
 
 #main-section-three {
@@ -111,7 +113,38 @@ main {
     flex: 1;
 }
 
-.main-content-titles {
+/*Contents*/
+#main-content {
+    display: grid;
+    height: 100%;
+    place-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+#main-content-whoweare {
+    height: 100%;
+}
+
+#main-content-whoweare-contenttop {
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    height: 40%;
+}
+
+#main-content-whoare-contentbottom {
+    display: grid;
+    padding: 5%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 20% 10% 70%;
+    justify-items: center;
+    height: 60%;
+}
+
+/*Texts, titles and images*/
+.main-titles {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -122,35 +155,29 @@ main {
     font-size: 38px;
 }
 
-#main-content-two {
-    display: grid;
-    flex: 1;
-    place-items: center;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-}
-
-.main-content {
-    display: grid;
-    flex: 1;
-    place-items: center;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-}
-
-.main-content-texts {
+.texts {
     font-size: 20px;
 }
 
-.main-content-texts {
-     display: flex;
-}
-
 .main-content-images {
-    width: 78%;
-    height: 85%;
+    width: 76%;
+    height: 71%;
 }
 
+.main-content-whoare-contentbottom-titles {
+    grid-row: 2;
+}
+
+.main-content-whoare-contentbottom-images {
+    grid-row: 1;
+}
+
+.main-content-whoare-contentbottom-text {
+    grid-row: 3;
+    font-size: 20px;
+}
+
+/*Footer*/
 footer {
     display: grid;
     grid-template-rows: 1fr;
