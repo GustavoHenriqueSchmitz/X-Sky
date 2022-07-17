@@ -75,7 +75,7 @@ main {
     flex-direction: column;
     margin: 8% 11%;
     background-color: white;
-    height: 400vh;
+    height: 290vh;
 }
 
 /*Sections content*/
@@ -86,28 +86,10 @@ main {
 }
 
 #main-section-whoweare {
-    height: 33%;
+    height: 53%;
 }
 
-#main-section-three {
-    display: flex;
-    flex-direction: column;
-    flex: 1; 
-}
-
-#main-section-four {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-}
-
-#main-section-five {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-}
-
-#main-section-six {
+#main-section-help {
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -143,6 +125,19 @@ main {
     height: 60%;
 }
 
+#main-content-help {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    height: 100%;
+}
+
+#main-content-help-left {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 58% 42%;
+    place-items: center;
+}
+
 /*Texts, titles and images*/
 .main-titles {
     display: flex;
@@ -156,10 +151,10 @@ main {
 }
 
 .texts {
-    font-size: 20px;
+    font-size: 19px;
 }
 
-.main-content-images {
+#main-content-image {
     width: 76%;
     height: 71%;
 }
@@ -173,8 +168,9 @@ main {
 }
 
 .main-content-whoare-contentbottom-text {
+    text-align: center;
     grid-row: 3;
-    font-size: 20px;
+    font-size: 19px;
 }
 
 /*Footer*/
