@@ -7,6 +7,7 @@
     <title>X-Sky</title>
     <link rel="stylesheet" href="index.css">
     <link rel="icon" type="image/x-icon" href="img/logo.png">
+    <script src="https://www.google.com/recaptcha/api.js"></script>
 </head>
 <body>
     <header>
@@ -60,7 +61,7 @@
                         <div class="gmap_canvas">
                             <iframe src="https://maps.google.com/maps?q=51.50057999078378,%20-0.13792750855335817&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" id="gmap_canvas" scrolling="no" style="width: 600px; height: 400px;" frameborder="0"></iframe>
                             <a href="https://fnftest.net" style="display:none">fnf test</a>
-                            <style>.mapouter{position:relative;text-align:right;height:80%;width:80%;}</style>
+                            <style>.mapouter{position:relative;text-align:right;height:75%;width:84%;}</style>
                             <a href="https://googlemapsiframegenerator.com" style="display:none">Google Maps Iframe Generator - Free Html Embed Code</a>
                             <style>.gmap_canvas{overflow:hidden;background:none!important;height:100%;width:100%;}</style>
                         </div>
@@ -153,15 +154,44 @@
                     <img src="img/contato.png" alt="Icone de um telefone">
                 </div>
                 <div id="main-content-help-right">
-
+                    <form action="/index.html" method="post" name="contact">
+                        <div id="main-content-help-right-form-base">
+                            <div id="main-content-help-right-form-base-nameandemail">
+                                <input type="text" placeholder="Nome">
+                                <input type="email" placeholder="Email">
+                            </div>
+                            <div id="main-content-help-right-form-base-message">
+                                <textarea type="text" placeholder="Message"></textarea>
+                            </div>
+                            <div id="main-content-help-right-form-base-submit">
+                                <input type="button">
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </section>
     </main>
     <footer>
-        <div></div>
+        <div id="footer-icons">
+            <a href="https://youtube.com" target="_blank" class="footer-icons"><img src="img/youtube.png" alt="Icone do Youtube"></a>
+            <a href="https://facebook.com" target="_blank" class="footer-icons"><img src="img/facebook.png" alt="Icone do Facebook"></a>
+            <a href="https://instagram.com" target="_blank" class="footer-icons"><img src="img/instagram.png" alt="Icone do Instagram"></a>
+            <a href="https://twitter.com" target="_blank" class="footer-icons"><img src="img/twitter.png" alt="Icone do Twitter"></a>
+            <a href="https://linkedin.com" target="_blank" class="footer-icons"><img src="img/linkedin.png" alt="Icone do Linkedin"></a>
+        </div>
         <div class="logo"><img src="img/logo.png" alt="Logo da X-Sky"></div>
-        <div></div>
+        <div>
+            <div id="footer-navigation">
+                <a href="security-faq" class="texts">Security FAQ</a>
+                <a href="cookies" class="texts">Cookies</a>
+                <a href="privacy-policy" class="texts">Privacy Policy</a>
+                <a href="terms-conditions" class="texts">Terms & Conditions</a>
+            </div>
+            <div id="copyright">
+                <p class="texts">Copyright © 2022 X-Sky, Inc.</p>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
