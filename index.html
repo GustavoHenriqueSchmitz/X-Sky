@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>X-Sky</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/medias-index.css">
     <link rel="icon" type="image/x-icon" href="img/logo.png">
     <script src="https://www.google.com/recaptcha/api.js"></script>
 </head>
@@ -14,7 +15,11 @@
         <div id="header-content">
             <a href="index.html" class="logo"><img src="img/logo.png" alt="Logo da X-Sky"></a>
             <nav id="header-navigation">
-                <ul>
+                <input id="menu-toggle" type="checkbox"/>
+                <label class="menu-button-container" for="menu-toggle">
+                <div class="menu-button"></div>
+                </label>
+                <ul id="menu">
                     <li>Home</li>
                     <li>Trabalhe Conosco</li>
                     <li>Produtos</li>
@@ -191,5 +196,16 @@
             </div>
         </div>
     </footer>
+    <script>
+        function gfgMenu() {
+            const GFG = document.querySelector('.links');
+            if (GFG.classList.contains('d-none')) {
+                GFG.classList.remove('d-none');
+            }
+            else {
+                GFG.classList.add('d-none');
+            }
+        }
+    </script>
 </body>
 </html>
