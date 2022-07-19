@@ -67,11 +67,13 @@ header {
     list-style: none;
 }
 
-#menu li {
+#menu a {
     font-size: 19px;
     color: white;
     background-color: black;
     padding: 1% 3%;
+    text-decoration: none;
+    color: white;
 }
 
 /*Main Config*/
@@ -238,9 +240,12 @@ main {
 }
 
 #main-content-help-right-form-base-submit button {
+    background-color: black;
+    color: white;
     font-size: 19px;
     height: 45%;
     width: 60%;
+    cursor: pointer;
 }
 
 /*Footer*/
@@ -261,7 +266,7 @@ footer {
 }
 
 .footer-icons {
-    height: 23%;
+    height: 28%;
     width: 7%;
 }
 
@@ -275,6 +280,10 @@ footer {
     height: 60%;
     align-items: center;
     justify-content: space-around;
+}
+
+#footer-navigation a {
+    color: black;
 }
 
 #copyright {
