@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/medias-index.css">
     <link rel="icon" type="image/x-icon" href="img/logo.png">
-    <script src="https://www.google.com/recaptcha/api.js"></script>
 </head>
 <body>
     <header>
@@ -32,7 +31,7 @@
     <main>
         <section id="main-section">
             <div class="main-titles">
-                <h1 class="titles">Soluções e serviços de tecnologia inteligente!</h1>
+                <h1 class="titles">Soluções de tecnologia inteligente!</h1>
             </div>
             <div id="main-content">
                 <p class="texts">
@@ -62,7 +61,7 @@
                     </p>
                     <div class="mapouter">
                         <div class="gmap_canvas">
-                            <iframe src="https://maps.google.com/maps?q=51.50057999078378,%20-0.13792750855335817&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" id="gmap_canvas" scrolling="no" style="width: 600px; height: 400px;" frameborder="0"></iframe>
+                            <iframe src="https://maps.google.com/maps?q=51.50057999078378,%20-0.13792750855335817&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" id="gmap_canvas" scrolling="no" style="width: 100%; height: 100%;" frameborder="0"></iframe>
                             <a href="https://fnftest.net" style="display:none">fnf test</a>
                             <style>.mapouter{position:relative;text-align:right;height:75%;width:84%;}</style>
                             <a href="https://googlemapsiframegenerator.com" style="display:none">Google Maps Iframe Generator - Free Html Embed Code</a>
@@ -113,7 +112,7 @@
                         novas técnologias, aplicações</br>
                         mobile, aplicações inovadoras.
                     </p>
-                    <h2 class="main-content-whoare-contentbottom-services">Nossos Serviços</h2>
+                    <h2 class="main-content-whoare-contentbottom-titles">Nossos Serviços</h2>
                     <img src="img/servicos.png" alt="Icone serviços" class="main-content-whoare-contentbottom-images">
                     <p class="main-content-whoare-contentbottom-text">
                     </br>Desenvolvemos das mais</br>
@@ -167,7 +166,7 @@
                                 <textarea type="text" placeholder="Message"></textarea>
                             </div>
                             <div id="main-content-help-right-form-base-submit">
-                                <input type="button">
+                                <button type="button">Enviar</button>
                             </div>
                         </div>
                     </form>
@@ -183,7 +182,7 @@
             <a href="https://twitter.com" target="_blank" class="footer-icons"><img src="img/twitter.png" alt="Icone do Twitter"></a>
             <a href="https://linkedin.com" target="_blank" class="footer-icons"><img src="img/linkedin.png" alt="Icone do Linkedin"></a>
         </div>
-        <div class="logo"><img src="img/logo.png" alt="Logo da X-Sky"></div>
+        <div id="logo-footer" class="logo"><img src="img/logo.png" alt="Logo da X-Sky"></div>
         <div>
             <div id="footer-navigation">
                 <a href="security-faq" class="texts">Security FAQ</a>
@@ -196,16 +195,5 @@
             </div>
         </div>
     </footer>
-    <script>
-        function gfgMenu() {
-            const GFG = document.querySelector('.links');
-            if (GFG.classList.contains('d-none')) {
-                GFG.classList.remove('d-none');
-            }
-            else {
-                GFG.classList.add('d-none');
-            }
-        }
-    </script>
 </body>
 </html>
