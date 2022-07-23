@@ -232,6 +232,11 @@ button {
 }
 
 body {
+  background-image: url('/img/bg-01.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;;
+
   font-family: "Open Sans", "Arial", "Helvetica Neue", sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -263,41 +268,6 @@ h5 {
 
 h6 {
   font-size: 13px;
-}
-
-/* ==========================================================================
-   #BACKGROUND
-   ========================================================================== */
-.bg-blue {
-  background: #2c6ed5;
-}
-
-.bg-red {
-  background: #fa4251;
-}
-
-.bg-gra-01 {
-  background: -webkit-gradient(linear, left bottom, left top, from(#fbc2eb), to(#a18cd1));
-  background: -webkit-linear-gradient(bottom, #fbc2eb 0%, #a18cd1 100%);
-  background: -moz-linear-gradient(bottom, #fbc2eb 0%, #a18cd1 100%);
-  background: -o-linear-gradient(bottom, #fbc2eb 0%, #a18cd1 100%);
-  background: linear-gradient(to top, #fbc2eb 0%, #a18cd1 100%);
-}
-
-.bg-gra-02 {
-  background: -webkit-gradient(linear, left bottom, right top, from(#fc2c77), to(#6c4079));
-  background: -webkit-linear-gradient(bottom left, #fc2c77 0%, #6c4079 100%);
-  background: -moz-linear-gradient(bottom left, #fc2c77 0%, #6c4079 100%);
-  background: -o-linear-gradient(bottom left, #fc2c77 0%, #6c4079 100%);
-  background: linear-gradient(to top right, #fc2c77 0%, #6c4079 100%);
-}
-
-.bg-gra-03 {
-  background: -webkit-gradient(linear, left bottom, right top, from(#08aeea), to(#b721ff));
-  background: -webkit-linear-gradient(bottom left, #08aeea 0%, #b721ff 100%);
-  background: -moz-linear-gradient(bottom left, #08aeea 0%, #b721ff 100%);
-  background: -o-linear-gradient(bottom left, #08aeea 0%, #b721ff 100%);
-  background: linear-gradient(to top right, #08aeea 0%, #b721ff 100%);
 }
 
 /* ==========================================================================
@@ -381,62 +351,129 @@ h6 {
 /* ==========================================================================
    #BUTTON
    ========================================================================== */
-.btn {
-  display: inline-block;
-  line-height: 50px;
-  padding: 0 50px;
-  -webkit-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
-  -moz-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-  cursor: pointer;
-  font-size: 15px;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #fff;
-  font-family: inherit;
-}
+   .container-login100-form-btn {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .login100-form-btn {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    width: 100%;
+    height: 60px;
+    background-color: #333333;
+    border-radius: 10px;
+  
+    font-family: Poppins-Medium;
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.2;
+  
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .login100-form-btn::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    top: 0;
+    left: 0;
+    background: #a64bf4;
+    background: -webkit-linear-gradient(45deg, #00dbde, #fc00ff);
+    background: -o-linear-gradient(45deg, #00dbde, #fc00ff);
+    background: -moz-linear-gradient(45deg, #00dbde, #fc00ff);
+    background: linear-gradient(45deg, #00dbde, #fc00ff);
+    opacity: 0;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+  
+  .login100-form-btn:hover:before {
+    opacity: 1;
+  }
 
-.btn--radius {
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-}
+  /* ==========================================================================
+   #UPLOAD BUTTON
+   ========================================================================== */
 
-.btn--radius-2 {
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+  .file-wrapper{
+    padding: 5% 0 0 0;  
+    width:100%;
+    margin:auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
-.btn--pill {
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  border-radius: 20px;
+.upload-btn-wrapper{
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    cursor: pointer;
 }
-
-.btn--green {
-  background: #57b846;
+.upload-file{
+    border:2px dashed rgb(190, 190, 190);
+    color: gray;
+    background-color: white;
+    width:400px;
+    height:250px;
+    border-radius: 8px;
+    font-size:15px;
+    cursor: pointer;
 }
-
-.btn--green:hover {
-  background: #4dae3c;
+.upload-btn-wrapper input[type=file]{
+    width:100%;
+    position: absolute;
+    left:0;
+    right:0;
+    top:0;
+    opacity: 0;
+    cursor: pointer;
+    min-height: 300px;
 }
-
-.btn--blue {
-  background: #4272d7;
+.success{
+    display:none;
 }
-
-.btn--blue:hover {
-  background: #3868cd;
+.success i{
+    font-size:22px;
+    margin-left:6px;
+    margin-top:10px;
+    color:#00b665;
 }
-
-.btn--red {
-  background: #ff4b5a;
+.font-50{
+    font-size:50px;
 }
-
-.btn--red:hover {
-  background: #eb3746;
+.d-block{
+    display: block;
+}
+.btn .upload-file{
+    font-size:13px;
+}
+.upload-btn{
+    display: block;
+    font-size:18px;
+    color:#00b665;
 }
 
 /* ==========================================================================
@@ -618,6 +655,43 @@ input {
   margin: 0;
   margin-top: 7px;
   left: 0;
+}
+
+.focus-input100 {
+  position: absolute;
+  display: block;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  top: -1px;
+  left: -1px;
+  pointer-events: none;
+  border: 1px solid #fc00ff;
+  border-radius: 10px;
+
+  visibility: hidden;
+  opacity: 0;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+
+  -webkit-transform: scaleX(1.1) scaleY(1.3);
+  -moz-transform: scaleX(1.1) scaleY(1.3);
+  -ms-transform: scaleX(1.1) scaleY(1.3);
+  -o-transform: scaleX(1.1) scaleY(1.3);
+  transform: scaleX(1.1) scaleY(1.3);
+}
+
+.input--style-5:focus + .focus-input100 {
+  visibility: visible;
+  opacity: 1;
+
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
 }
 
 /* ==========================================================================
