@@ -10,5 +10,5 @@ func signUp(router fiber.Router) {
 
 	router = router.Group("/login")
 
-	router.Get("/sign-up", controllers.SignUp)
+	router.Put("/sign-up", controllers.SignUp)
 }

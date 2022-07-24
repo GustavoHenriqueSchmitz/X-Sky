@@ -25,21 +25,21 @@
                     <h2 class="title">Cadastre-se</h2>
                 </div>
                 <div class="card-body">
-                    <form method="POST">
+                    <form method="POST" action="localhost:5000/api/login/sign-up">
                         <div class="form-row m-b-55">
                             <div class="name">Nome</div>
                             <div class="value">
                                 <div class="row row-space">
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="first_name">
+                                            <input class="input--style-5" type="text" name="name">
                                             <span class="focus-input100"></span>
-                                            <label class="label--desc">Primeiro Nome</label>
+                                            <label class="label--desc">Nome</label>
                                         </div>
                                     </div>
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="last_name">
+                                            <input class="input--style-5" type="text" name="last-name">
                                             <span class="focus-input100"></span>
                                             <label class="label--desc">Sobrenome</label>
                                         </div>
@@ -51,7 +51,7 @@
                             <div class="name">Email</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-5" type="text" name="company">
+                                    <input class="input--style-5" type="text" name="email">
                                     <span class="focus-input100"></span>
                                 </div>
                             </div>
@@ -60,7 +60,7 @@
                             <div class="name">Senha</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-5" type="email" name="email">
+                                    <input class="input--style-5" type="password" name="password">
                                     <span class="focus-input100"></span>
                                 </div>
                             </div>
@@ -71,14 +71,14 @@
                                 <div class="row row-refine">
                                     <div class="col-3">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="area_code">
+                                            <input class="input--style-5" type="number" name="area_code">
                                             <span class="focus-input100"></span>
                                             <label class="label--desc">Código Área</label>
                                         </div>
                                     </div>
                                     <div class="col-9">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="phone">
+                                            <input class="input--style-5" type="number" name="phone">
                                             <span class="focus-input100"></span>
                                             <label class="label--desc">Número Telefone/Celular</label>
                                         </div>
@@ -95,7 +95,7 @@
                                         <span class="upload-select-button" id="blankFile">Suporta JPG, JPG2000 and PNG</span>
                                         <span class="success"><i class="far fa-check-circle text-success"></i></span>
                                     </button>
-                                    <input type="file" name="selectfile" id="selectfile">
+                                    <input type="file" name="perfil_photo" id="selectfile">
                                 </div>
                             </div>
                         </div>

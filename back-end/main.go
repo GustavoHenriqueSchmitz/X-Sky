@@ -1,8 +1,8 @@
 package main
 
 import (
-	"X-Sky/pkg/config"
-	middleware "X-Sky/pkg/middlewares"
+	"X-Sky/config"
+	middleware "X-Sky/middlewares"
 	"X-Sky/routes"
 	"fmt"
 	"os"
