@@ -3,6 +3,7 @@ package main
 import (
 	"X-Sky/pkg/config"
 	middleware "X-Sky/pkg/middlewares"
+	"X-Sky/routes"
 	"fmt"
 	"os"
 	"os/signal"
@@ -22,6 +23,7 @@ func main() {
 	middleware.FiberMiddleware(app)
 
 	// Routes.
+	routes.Routes(app)
 
 	// signal channel to capture system calls
 	sigCh := make(chan os.Signal, 1)
