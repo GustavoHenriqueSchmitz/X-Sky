@@ -18,13 +18,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.3.1/css/all.min.css">
 </head>
 <body>
-    <div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
-        <div class="wrapper wrapper--w790">
-            <div class="card card-5">
-                <div class="card-heading">
+    <div id="page-wrapper bg-gra-03 p-t-45 p-b-50">
+        <div id="wrapper wrapper--w790">
+            <div id="card card-5">
+                <div id="card-heading">
                     <h2 class="title">Cadastre-se</h2>
                 </div>
-                <div class="card-body">
+                <div id="card-body">
                     <form id="signup-form" method="post" action="http://localhost:5000/api/login/sign-up">
                         <div class="form-row m-b-55">
                             <div class="name">Nome</div>
@@ -32,15 +32,15 @@
                                 <div class="row row-space">
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="name" id="name">
-                                            <span class="focus-input100"></span>
+                                            <input class="input--style" type="text" name="name" id="name">
+                                            <span class="focus-input"></span>
                                             <label class="label--desc">Nome</label>
                                         </div>
                                     </div>
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="last_name" id="last_name">
-                                            <span class="focus-input100"></span>
+                                            <input class="input--style" type="text" name="last_name" id="last_name">
+                                            <span class="focus-input"></span>
                                             <label class="label--desc">Sobrenome</label>
                                         </div>
                                     </div>
@@ -51,8 +51,8 @@
                             <div class="name">Email</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-5" type="text" name="email" id="email">
-                                    <span class="focus-input100"></span>
+                                    <input class="input--style" type="text" name="email" id="email">
+                                    <span class="focus-input"></span>
                                 </div>
                             </div>
                         </div>
@@ -60,8 +60,8 @@
                             <div class="name">Senha</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-5" type="password" name="password" id="password">
-                                    <span class="focus-input100"></span>
+                                    <input class="input--style" type="password" name="password" id="password">
+                                    <span class="focus-input"></span>
                                 </div>
                             </div>
                         </div>
@@ -71,15 +71,15 @@
                                 <div class="row row-refine">
                                     <div class="col-3">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="area_code" id="area_code">
-                                            <span class="focus-input100"></span>
+                                            <input class="input--style" type="text" name="area_code" id="area_code">
+                                            <span class="focus-input"></span>
                                             <label class="label--desc">Código Área</label>
                                         </div>
                                     </div>
                                     <div class="col-9">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="phone" id="phone">
-                                            <span class="focus-input100"></span>
+                                            <input class="input--style" type="text" name="phone" id="phone">
+                                            <span class="focus-input"></span>
                                             <label class="label--desc">Número Telefone/Celular</label>
                                         </div>
                                     </div>
@@ -88,8 +88,8 @@
                         </div>
                         <div class="form-row p-t-20">
                             <label class="label label--block">Selecione uma foto de perfil [opcional]</label>
-                            <div class="file-wrapper">
-                                <div class="upload-btn-wrapper">
+                            <div id="file-wrapper">
+                                <div id="upload-btn-wrapper">
                                     <button class="btn upload-file font-weight-500">
                                         <span class="upload-btn"><i class="fas fa-cloud-upload-alt d-block font-50 pb-2"></i>Navegue pelas pastas por aqui</span>
                                         <span class="upload-select-button" id="blankFile">Suporta JPG, JPG2000 and PNG</span>
@@ -99,7 +99,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="container-login100-form-btn m-t-17">
+                        <div class="container-login-form-btn m-t-17">
                             <button type="submit" id="login-form-btn">Registrar</button>
                         </div>
                     </form>
