@@ -25,21 +25,21 @@
                     <h2 class="title">Cadastre-se</h2>
                 </div>
                 <div class="card-body">
-                    <form method="POST" action="localhost:5000/api/login/sign-up">
+                    <form id="signup-form" method="post" action="http://localhost:5000/api/login/sign-up">
                         <div class="form-row m-b-55">
                             <div class="name">Nome</div>
                             <div class="value">
                                 <div class="row row-space">
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="name">
+                                            <input class="input--style-5" type="text" name="name" id="name">
                                             <span class="focus-input100"></span>
                                             <label class="label--desc">Nome</label>
                                         </div>
                                     </div>
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="last-name">
+                                            <input class="input--style-5" type="text" name="last_name" id="last_name">
                                             <span class="focus-input100"></span>
                                             <label class="label--desc">Sobrenome</label>
                                         </div>
@@ -51,7 +51,7 @@
                             <div class="name">Email</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-5" type="text" name="email">
+                                    <input class="input--style-5" type="text" name="email" id="email">
                                     <span class="focus-input100"></span>
                                 </div>
                             </div>
@@ -60,7 +60,7 @@
                             <div class="name">Senha</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-5" type="password" name="password">
+                                    <input class="input--style-5" type="password" name="password" id="password">
                                     <span class="focus-input100"></span>
                                 </div>
                             </div>
@@ -71,14 +71,14 @@
                                 <div class="row row-refine">
                                     <div class="col-3">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="number" name="area_code">
+                                            <input class="input--style-5" type="text" name="area_code" id="area_code">
                                             <span class="focus-input100"></span>
                                             <label class="label--desc">Código Área</label>
                                         </div>
                                     </div>
                                     <div class="col-9">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="number" name="phone">
+                                            <input class="input--style-5" type="text" name="phone" id="phone">
                                             <span class="focus-input100"></span>
                                             <label class="label--desc">Número Telefone/Celular</label>
                                         </div>
@@ -100,7 +100,7 @@
                             </div>
                         </div>
                         <div class="container-login100-form-btn m-t-17">
-                            <button class="login100-form-btn">Registrar</button>
+                            <button type="submit" id="login-form-btn">Registrar</button>
                         </div>
                     </form>
                 </div>

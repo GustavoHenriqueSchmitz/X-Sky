@@ -2,6 +2,7 @@ package main
 
 import (
 	"X-Sky/config"
+	"X-Sky/database"
 	middleware "X-Sky/middlewares"
 	"X-Sky/routes"
 	"fmt"
@@ -21,6 +22,9 @@ func main() {
 
 	// Attach Middlewares.
 	middleware.FiberMiddleware(app)
+
+	//Connect to DB
+	database.Connect()
 
 	// Routes.
 	routes.Routes(app)

@@ -361,7 +361,7 @@ h6 {
     flex-wrap: wrap;
   }
   
-  .login100-form-btn {
+  #login-form-btn {
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
@@ -388,7 +388,7 @@ h6 {
     z-index: 1;
   }
   
-  .login100-form-btn::before {
+  #login-form-btn::before {
     content: "";
     display: block;
     position: absolute;
@@ -410,7 +410,7 @@ h6 {
     transition: all 0.4s;
   }
   
-  .login100-form-btn:hover:before {
+  #login-form-btn:hover:before {
     opacity: 1;
   }
 
