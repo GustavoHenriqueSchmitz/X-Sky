@@ -4,6 +4,11 @@ create table users (
 	last_name varchar(255) not null,
 	email varchar(255) unique not null,
 	password varchar(255) not null,
-	area_code numeric(2),
-	phone integer
+	area_code varchar(2),
+	phone varchar(25),
+	perfil_photo text
 );
+
+select password from users where email = 'hello@go.app'
+
+drop table users

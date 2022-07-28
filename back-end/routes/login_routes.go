@@ -10,5 +10,6 @@ func signUp(router fiber.Router) {
 
 	router = router.Group("/login")
 
+	router.Post("/", controllers.Login)
 	router.Post("/sign-up", controllers.SignUp)
 }
