@@ -20,7 +20,7 @@
 	<div id="limiter">
 		<div id="container-login" style="background-image: url('/img/bg-01.jpg');">
 			<div class="wrap-login p-l-110 p-r-110 p-t-62 p-b-33">
-				<form class="login-form validate-form flex-sb flex-w" method="post">
+				<form id="login-form" class="login-form validate-form flex-sb flex-w" method="post" action="http://localhost:5000/api/login">
 					<span class="login-form-title p-b-53">Conecte-se Com</span>
 					<a href="#" class="btn-face m-b-20"><i class="fa fa-facebook-official"></i>Facebook</a>
 					<a href="#" class="btn-google m-b-20"><img src="/img/icons/icon-google.png" alt="GOOGLE">Google</a>
@@ -28,7 +28,7 @@
 						<span class="txt1">Email</span>
 					</div>
 					<div class="wrap-input validate-input" data-validate = "Username is required">
-						<input class="input" type="text" name="username">
+						<input class="input" type="text" name="email">
 						<span class="focus-input"></span>
 					</div>
 					<div class="p-t-13 p-b-9">
@@ -36,7 +36,7 @@
 						<a href="#" class="txt2 bo1 m-l-5">Esqueceu?</a>
 					</div>
 					<div class="wrap-input validate-input" data-validate = "Password is required">
-						<input class="input" type="password" name="pass">
+						<input class="input" type="password" name="password">
 						<span class="focus-input"></span>
 					</div>
 					<div class="container-login-form-btn m-t-17">
@@ -51,14 +51,14 @@
 		</div>
 	</div>
 	<div id="dropDownSelect1"></div>
-	<script src="/vendor/jquery/jquery-3.2.1.min.js"></script>
-	<script src="/vendor/animsition/js/animsition.min.js"></script>
-	<script src="/vendor/bootstrap/js/popper.js"></script>
-	<script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
-	<script src="/vendor/select2/select2.min.js"></script>
-	<script src="/vendor/daterangepicker/moment.min.js"></script>
-	<script src="/vendor/daterangepicker/daterangepicker.js"></script>
-	<script src="/vendor/countdowntime/countdowntime.js"></script>
-	<script src="/js/main.js"></script>
+	<script src="/vendor/login/jquery/jquery-3.2.1.min.js"></script>
+	<script src="/vendor/login/animsition/js/animsition.min.js"></script>
+	<script src="/vendor/login/bootstrap/js/popper.js"></script>
+	<script src="/vendor/login/bootstrap/js/bootstrap.min.js"></script>
+	<script src="/vendor/login/select2/select2.min.js"></script>
+	<script src="/vendor/login/daterangepicker/moment.min.js"></script>
+	<script src="/vendor/login/daterangepicker/daterangepicker.js"></script>
+	<script src="/vendor/login/countdowntime/countdowntime.js"></script>
+	<script src="/js/login.js"></script>
 </body>
 </html>
