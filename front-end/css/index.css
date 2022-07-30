@@ -1,6 +1,8 @@
 @charset "UTF-8";
 
-/*Base config*/
+/*=========================================================
+                        Base config
+=========================================================*/
 * {
     margin: 0;
     box-sizing: border-box;
@@ -13,7 +15,9 @@ body {
     min-height: 100vh;
 }
 
-/*Header Config*/
+/*=========================================================
+                    Header Config
+=========================================================*/
 header {
     background-color: white;
     height: 18vh;
@@ -76,7 +80,9 @@ header {
     color: white;
 }
 
-/*Main Config*/
+/*=========================================================
+                        Main Config
+=========================================================*/
 main {
     display: flex;
     flex-direction: column;
@@ -89,7 +95,9 @@ main {
     min-height: 2450px;
 }
 
-/*Sections content*/
+/*=========================================================
+                    Sections content
+=========================================================*/
 #main-section {
     display: grid;
     grid-template-columns: 1fr;
@@ -111,7 +119,9 @@ main {
     height: 26%;
 }
 
-/*Contents*/
+/*=========================================================
+                        Contents
+=========================================================*/
 #main-content {
     display: grid;
     height: 100%;
@@ -185,7 +195,9 @@ main {
     display: flex;
 }
 
-/*Texts, titles and images*/
+/*=========================================================
+                Texts, titles and images
+=========================================================*/
 .main-titles {
     display: flex;
     height: 100%;
@@ -218,7 +230,9 @@ main {
     min-height: 130px;
 }
 
-/*Forms*/
+/*=========================================================
+                            Forms
+=========================================================*/
 #main-content-help-right form {
     display: flex;
     flex-direction: row;
@@ -270,7 +284,9 @@ main {
     cursor: pointer;
 }
 
-/*Footer*/
+/*=========================================================
+                        Footer
+=========================================================*/
 footer {
     display: grid;
     grid-template-rows: 1fr;
@@ -297,7 +313,7 @@ footer {
 .footer-icons img {
     height: 100%;
     width: 100%;
-  }
+}
 
 #footer-navigation {
     display: flex;
@@ -317,7 +333,9 @@ footer {
     height: 40%;
 }
 
-/*Menu Hamburguer*/
+/*=========================================================
+                    Menu Hamburguer
+=========================================================*/
 #menu > a {
     overflow: hidden;
 }

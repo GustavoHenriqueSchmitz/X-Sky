@@ -20,7 +20,7 @@
 	<div id="limiter">
 		<div id="container-login" style="background-image: url('/img/bg-01.jpg');">
 			<div class="wrap-login p-l-110 p-r-110 p-t-62 p-b-33">
-				<form id="login-form" class="login-form validate-form flex-sb flex-w" method="post" action="http://localhost:5000/api/login">
+				<form class="login-form validate-form flex-sb flex-w" method="post" action="http://localhost:5000/api/login">
 					<span class="login-form-title p-b-53">Conecte-se Com</span>
 					<a href="#" class="btn-face m-b-20"><i class="fa fa-facebook-official"></i>Facebook</a>
 					<a href="#" class="btn-google m-b-20"><img src="/img/icons/icon-google.png" alt="GOOGLE">Google</a>
@@ -40,7 +40,7 @@
 						<span class="focus-input"></span>
 					</div>
 					<div class="container-login-form-btn m-t-17">
-						<button class="login-form-btn">Entrar</button>
+						<button id="login-form-btn">Entrar</button>
 					</div>
 					<div class="w-full text-center p-t-55">
 						<span class="txt2">Não é um membro?</span>
@@ -50,7 +50,6 @@
 			</div>
 		</div>
 	</div>
-	<div id="dropDownSelect1"></div>
 	<script src="/vendor/login/jquery/jquery-3.2.1.min.js"></script>
 	<script src="/vendor/login/animsition/js/animsition.min.js"></script>
 	<script src="/vendor/login/bootstrap/js/popper.js"></script>

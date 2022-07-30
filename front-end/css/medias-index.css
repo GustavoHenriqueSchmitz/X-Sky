@@ -1,6 +1,7 @@
-/*Media querie for header*/
+/*=========================================================
+                Media querie for header
+=========================================================*/
 @media (max-width: 1200px) {
-  /*Header*/
 
   header {
     padding-left: 10%;
@@ -17,7 +18,9 @@
     align-items: center;
   }
 
-  /*Menu Hamburguer*/
+  /*=========================================================
+                        Menu Hamburguer
+  =========================================================*/
   .menu-button-container {
     display: flex;
   }
@@ -58,9 +61,11 @@
   }
 }
 
-/*Media querie for footer*/
+/*=========================================================
+              Media querie for footer
+=========================================================*/
 @media (max-width: 1450px) {
-  /*Footer*/
+  
   footer {
   grid-template-rows: 45% 55%;
   grid-template-columns: 1fr;
@@ -77,7 +82,9 @@
   }
 }
 
-/*Medias queries for Main Container*/
+/*=========================================================
+            Medias queries for Main Container
+=========================================================*/
 @media (max-width: 1050px) {
   .texts {
     font-size: 17px;
@@ -110,13 +117,17 @@
 
 @media (max-width: 900px) {
 
-  /*Menu container*/
+  /*=========================================================
+                        Menu container
+  =========================================================*/
   main {
     height: 450vh;
     max-height: 10000px;
   }
 
-  /*Sections content*/
+  /*=========================================================
+                      Sections content
+  =========================================================*/
   #main-section {
     grid-template-columns: 1fr;
     grid-template-rows: 20% 80%;
@@ -135,7 +146,9 @@
     height: 23%;
   }
 
-  /*Contents*/
+  /*=========================================================
+                          Contents
+  =========================================================*/
   #main-content {
     grid-template-columns: 1fr;
     grid-template-rows: 35% 65%;
@@ -186,7 +199,9 @@
     width: 20%;
   }
 
-  /*Texts, titles and images*/
+  /*=========================================================
+                  Texts, titles and images
+  =========================================================*/
   .titles {
     font-size: 32px;
   }
@@ -218,7 +233,9 @@
     font-size: 19px;
   }
 
-  /*Forms*/
+  /*=========================================================
+                            Forms
+  =========================================================*/
   #main-content-help-right-form-base {
     display: grid;
     grid-template-rows: 22% 60% 18%;
@@ -237,7 +254,9 @@
   }
 }
 
-/*Media queries para dispositivos verticais*/
+/*=========================================================
+        Media queries para dispositivos verticais
+=========================================================*/
 @media (max-width: 800px) {
 
   #main-content-image {
