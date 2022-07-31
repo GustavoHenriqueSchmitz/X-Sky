@@ -1,4 +1,4 @@
-/* ------ Function to make the code sleep in milisseconds ------ */
+// Function to make the code sleep in milisseconds
 function Sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
