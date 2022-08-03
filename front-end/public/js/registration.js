@@ -1,4 +1,4 @@
-/* ------ Function to make the code sleep in milisseconds ------ */
+// Function to make the code sleep in milisseconds
 function Sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
@@ -154,9 +154,9 @@ $("#selectfile").bind('change',function(){
     var filename = $("#selectfile").val();
     if(/^s*$/.test(filename)){
         $("#blankFile").text("No File Chosen..");
-        $(".success").hide();
+        $("#success").hide();
     }else{
         $("#blankFile").text(filename.replace("C:\\fakepath\\",""));
-        $(".success").show();
+        $("#success").show();
     }
 })

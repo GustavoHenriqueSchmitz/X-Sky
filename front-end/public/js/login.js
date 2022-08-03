@@ -1,10 +1,10 @@
-
 (function ($) {
+    
     "use strict";
 
-
-    /*==================================================================
-    [ Validate ]*/
+    /*=========================================================
+                            Validate inputs
+    =========================================================*/
     var input = $('.validate-input .input');
 
     $('.validate-form').on('submit',function(){
@@ -27,6 +27,10 @@
         });
     });
 
+    /*=========================================================
+                    Function to validate inputs
+    =========================================================*/
+
     function validate (input) {
         if($(input).attr('type') == 'email' || $(input).attr('name') == 'email') {
             if($(input).val().trim().match(/^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{1,5}|[0-9]{1,3})(\]?)$/) == null) {
@@ -40,6 +44,9 @@
         }
     }
 
+    /*=========================================================
+                    Functions to return the validation
+    =========================================================*/
     function showValidate(input) {
         var thisAlert = $(input).parent();
 
@@ -57,7 +64,7 @@
                     Submit Form
 ========================================================*/
 async function postFormFieldsAsJson({url, formData}) {
-    //Create an object from the form data entries
+    // Create an object from the form data entries
     let formDataObject = Object.fromEntries(formData.entries());
     // Format the plain form data as JSON
     let formDataJsonString = JSON.stringify(formDataObject);
@@ -72,11 +79,11 @@ async function postFormFieldsAsJson({url, formData}) {
       body: formDataJsonString,
     };
   
-    //Get the response body as JSON.
-    //If the response was not OK, throw an error.
+    // Get the response body as JSON.
+    // If the response was not OK, throw an error.
     let res = await fetch(url, fetchOptions);
   
-    //If the response is not ok throw an error (for debugging)
+    // If the response is not ok throw an error (for debugging)
     if (!res.ok) {
       let error = await res.text();
       throw new Error(error);
