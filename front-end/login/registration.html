@@ -21,8 +21,8 @@
     <div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
         <div class="wrapper wrapper--w790">
             <div class="card card-5">
-                <div class="card-heading">
-                    <h2 class="title">Cadastre-se</h2>
+                <div id="card-heading">
+                    <h2 id="title">Cadastre-se</h2>
                 </div>
                 <div class="card-body">
                     <form id="signup-form" method="post" action="http://localhost:5000/api/login/sign-up">
@@ -32,7 +32,7 @@
                                 <div class="row row-space">
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="name" id="name">
+                                            <input class="input--style-5" type="text" name="name" id="name-input">
                                             <span class="focus-input100"></span>
                                             <label class="label--desc">Nome</label>
                                         </div>
@@ -89,17 +89,17 @@
                         <div class="form-row p-t-20">
                             <label class="label label--block">Selecione uma foto de perfil [opcional]</label>
                             <div class="file-wrapper">
-                                <div class="upload-btn-wrapper">
+                                <div id="upload-btn-wrapper">
                                     <button class="btn upload-file font-weight-500">
-                                        <span class="upload-btn"><i class="upload-image fas fa-cloud-upload-alt d-block font-50 pb-2"></i>Navegue pelas pastas por aqui</span>
-                                        <span class="upload-select-button" id="blankFile">Suporta JPG, JPG2000 and PNG</span>
-                                        <span class="success"><i class="far fa-check-circle text-success"></i></span>
+                                        <span id="upload-btn"><i class="upload-image fas fa-cloud-upload-alt d-block font-50 pb-2"></i>Navegue pelas pastas por aqui</span>
+                                        <span id="blankFile">Suporta JPG, JPG2000 and PNG</span>
+                                        <span id="success"><i class="far fa-check-circle text-success"></i></span>
                                     </button>
                                     <input type="file" name="perfil_photo" id="selectfile">
                                 </div>
                             </div>
                         </div>
-                        <div class="container-login100-form-btn m-t-17">
+                        <div id="container-login-form-btn m-t-17">
                             <button type="submit" id="login-form-btn">Registrar</button>
                         </div>
                     </form>
