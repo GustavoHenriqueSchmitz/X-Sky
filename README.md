@@ -41,6 +41,21 @@ Contendo uma página inicial, cadastro e login.
 
 **3** - Em outro terminal, navegue até a mesma pasta e execute `go run main.go`
 
+**4** Código para criação da tabela do banco de dados.
+
+```
+create table users (
+	id serial primary key,
+	name varchar(255) not null,
+	last_name varchar(255) not null,
+	email varchar(255) unique not null,
+	password varchar(255) not null,
+	area_code varchar(2),
+	phone varchar(25),
+	perfil_photo text
+);
+```
+
 ### Front-end
 
 **1** - Abra um terminal, navegue até a pasta **front-end** do projeto.
