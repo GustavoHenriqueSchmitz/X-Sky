@@ -109,7 +109,7 @@ async function postFormFieldsAsJson({url, formData}) {
     throw new Error(error);
   }
   //If the response was OK, return the response body.
-  window.location.replace("/login");
+  window.location.replace("http://localhost:3000/login")
   return res.json();
 }
 
