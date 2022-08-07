@@ -12,17 +12,18 @@ func Login(router *fiber.Ctx) error {
 	loginData := models.Login{}
 
 	if err := router.BodyParser(&loginData); err != nil {
-		return err
+		router.Redirect("http://localhost:3000/login")
+		return nil
 	}
 
 	err := services.Login(loginData)
 
 	if err != nil {
-		router.Redirect("http://localhost:5500/login")
-		return err
+		router.Redirect("http://localhost:3000/login")
+		return nil
 	}
 
-	router.Redirect("http://localhost:5500")
+	router.Redirect("http://localhost:3000")
 	return nil
 }
 
@@ -31,10 +32,17 @@ func SignUp(router *fiber.Ctx) error {
 	signData := models.SignUp{}
 
 	if err := router.BodyParser(&signData); err != nil {
-		return err
+		router.Redirect("http://localhost:3000/sign-up")
+		return nil
 	}
 
-	services.SignUp(signData)
+	err := services.SignUp(signData)
 
+	if err != nil {
+		router.Redirect("http://localhost:3000/sign-up")
+		return nil
+	}
+
+	router.Redirect("http://localhost:3000/login")
 	return nil
 }
