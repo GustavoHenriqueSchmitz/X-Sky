@@ -1,18 +1,66 @@
 package database
 
 import (
-	"gorm.io/driver/postgres"
-	"gorm.io/gorm"
+	"fmt"
+	"time"
+
+	"database/sql"
+
+	_ "github.com/lib/pq"
 )
 
 var (
-	DB *gorm.DB
+	DB  *sql.DB
+	err error
+)
+
+const (
+	host     = "localhost"
+	port     = 5432
+	user     = "xsky"
+	password = "xsky"
+	dbname   = "X-Sky"
 )
 
 func Connect() error {
-	dsn := "host=localhost user=xsky password=xsky dbname=X-Sky port=5432 sslmode=disable TimeZone=America/Sao_Paulo"
-	db, _ := gorm.Open(postgres.Open(dsn))
-	DB = db
+
+	// connection string
+	psqlconn := fmt.Sprintf("host=%s port=%d user=%s password=%s dbname=%s sslmode=disable", host, port, user, password, dbname)
+
+	// open database
+	DB, err = sql.Open("postgres", psqlconn)
+
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	go func() {
+		time.Sleep(5 * time.Second)
+		for {
+
+			err = DB.Ping()
+			if err != nil {
+				fmt.Println("\nDatabase connection lost!")
+				for {
+
+					// open database
+					DB, err = sql.Open("postgres", psqlconn)
+
+					err = DB.Ping()
+					if err != nil {
+						fmt.Println("\nReconnection failed!")
+						time.Sleep(5 * time.Second)
+					} else {
+						fmt.Println("\nReconnected!")
+						time.Sleep(5 * time.Second)
+						break
+					}
+				}
+			} else {
+				time.Sleep(5 * time.Second)
+			}
+		}
+	}()
 
 	return nil
 }

@@ -12,18 +12,18 @@ func Login(router *fiber.Ctx) error {
 	loginData := models.Login{}
 
 	if err := router.BodyParser(&loginData); err != nil {
-		return err
+		return router.SendStatus(500)
 	}
 
 	err := services.Login(loginData)
 
 	if err != nil {
 		router.Redirect("http://localhost:5500/login")
-		return err
+		return router.Status(403).SendString(err.Error())
 	}
 
 	router.Redirect("http://localhost:5500")
-	return nil
+	return router.SendStatus(302)
 }
 
 func SignUp(router *fiber.Ctx) error {
@@ -31,10 +31,14 @@ func SignUp(router *fiber.Ctx) error {
 	signData := models.SignUp{}
 
 	if err := router.BodyParser(&signData); err != nil {
-		return err
+		return router.SendStatus(500)
 	}
 
-	services.SignUp(signData)
+	err := services.SignUp(signData)
 
-	return nil
+	if err != nil {
+		return router.Status(400).SendString(err.Error())
+	}
+
+	return router.Status(200).SendString("Success")
 }

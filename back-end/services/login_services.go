@@ -9,11 +9,7 @@ import (
 func Login(loginData models.Login) error {
 
 	var password string
-	err := database.DB.Table("users").Select("password").Where("email = " + "'" + loginData.Email + "'").Scan(&password)
-
-	if err.Error != nil {
-		return err.Error
-	}
+	database.DB.QueryRow("select password from users where email = '" + loginData.Email + "'").Scan(&password)
 
 	if password == "" {
 		return errors.New("Email não cadastrado.")
@@ -26,7 +22,11 @@ func Login(loginData models.Login) error {
 
 func SignUp(signData models.SignUp) error {
 
-	database.DB.Table("users").Create(signData)
+	_, err := database.DB.Query("insert into users(name, last_name, email, password, area_code, phone, perfil_photo) values('" + signData.Name + "', '" + signData.LastName + "', '" + signData.Email + "', '" + signData.Password + "', '" + signData.AreaCode + "', '" + signData.Phone + "', '" + signData.PerfilPhoto + "')	")
+
+	if err != nil {
+		return errors.New("Erro ao cadastrar.")
+	}
 
 	return nil
 }
