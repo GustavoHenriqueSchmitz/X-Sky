@@ -1,3 +1,5 @@
+/* Code for create the users table in database*/
+
 create table users (
 	id serial primary key,
 	name varchar(255) not null,
@@ -8,7 +10,3 @@ create table users (
 	phone varchar(25),
 	perfil_photo text
 );
-
-select password from users where email = 'hello@go.app'
-
-drop table users
