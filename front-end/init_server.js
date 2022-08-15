@@ -22,15 +22,16 @@ app.use(express.static(publicDir))
 app.use(express.static(vendorDir))
 app.use(express.static(fontsDir))
 
+// Routes
 app.get('/', (req, res) => {
     res.render('index')
 })
 
-app.get('/login', (req, res)=>{
+app.get('/login', (req, res) => {
     res.render('login/login')
 })
 
-app.get('/sign_up', (req, res)=>{
+app.get('/sign_up', (req, res) => {
     res.render('login/registration')
 })
 

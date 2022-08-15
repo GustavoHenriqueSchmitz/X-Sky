@@ -12,19 +12,25 @@ func Login(router *fiber.Ctx) error {
 	loginData := models.Login{}
 
 	if err := router.BodyParser(&loginData); err != nil {
-		router.Redirect("http://localhost:3000/login")
-		return nil
+		return router.Status(500).JSON(fiber.Map{
+			"message": err,
+			"error":   true,
+		})
 	}
 
 	err := services.Login(loginData)
 
 	if err != nil {
-		router.Redirect("http://localhost:3000/login")
-		return nil
+		return router.Status(400).JSON(fiber.Map{
+			"message": err.Error(),
+			"error":   true,
+		})
 	}
 
-	router.Redirect("http://localhost:3000")
-	return nil
+	return router.Status(200).JSON(fiber.Map{
+		"message": "Success",
+		"error":   false,
+	})
 }
 
 func SignUp(router *fiber.Ctx) error {
@@ -32,17 +38,23 @@ func SignUp(router *fiber.Ctx) error {
 	signData := models.SignUp{}
 
 	if err := router.BodyParser(&signData); err != nil {
-		router.Redirect("http://localhost:3000/sign-up")
-		return nil
+		return router.Status(500).JSON(fiber.Map{
+			"message": err.Error(),
+			"error":   true,
+		})
 	}
 
 	err := services.SignUp(signData)
 
 	if err != nil {
-		router.Redirect("http://localhost:3000/sign-up")
-		return nil
+		return router.Status(400).JSON(fiber.Map{
+			"message": "Error when trying to register data in the database.",
+			"error":   true,
+		})
 	}
 
-	router.Redirect("http://localhost:3000/login")
-	return nil
+	return router.Status(201).JSON(fiber.Map{
+		"message": "Success",
+		"error":   false,
+	})
 }

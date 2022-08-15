@@ -8,8 +8,6 @@ import (
 
 func signUp(router fiber.Router) {
 
-	router = router.Group("/login")
-
-	router.Post("/", controllers.Login)
-	router.Post("/sign-up", controllers.SignUp)
+	router.Post("/login", controllers.Login)
+	router.Post("/sign_up", controllers.SignUp)
 }
