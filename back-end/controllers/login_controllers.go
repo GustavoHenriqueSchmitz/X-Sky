@@ -7,8 +7,10 @@ import (
 	"github.com/gofiber/fiber/v2"
 )
 
+// Function Login, controller of login route.
 func Login(router *fiber.Ctx) error {
 
+	// Defines the data model, and takes the data from the request body.
 	loginData := models.Login{}
 
 	if err := router.BodyParser(&loginData); err != nil {
@@ -18,6 +20,7 @@ func Login(router *fiber.Ctx) error {
 		})
 	}
 
+	// Calls the login service and returns the responses.
 	err := services.Login(loginData)
 
 	if err != nil {
@@ -33,8 +36,10 @@ func Login(router *fiber.Ctx) error {
 	})
 }
 
+// Function SignUp, controller of sign-up route.
 func SignUp(router *fiber.Ctx) error {
 
+	// Defines the data model, and takes the data from the request body.
 	signData := models.SignUp{}
 
 	if err := router.BodyParser(&signData); err != nil {
@@ -44,6 +49,7 @@ func SignUp(router *fiber.Ctx) error {
 		})
 	}
 
+	// Calls the sign-up service and returns the responses.
 	err := services.SignUp(signData)
 
 	if err != nil {
