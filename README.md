@@ -1,6 +1,6 @@
 # X-Sky
 
-Este projeto é um desafio fornecido pela **ELITI**
+Este projeto é um desafio fornecido pela **ELITI**.
 
 É um site baseado em uma empresa fictícia.
 Contendo uma página inicial, cadastro e login.
