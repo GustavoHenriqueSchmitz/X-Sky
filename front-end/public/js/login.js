@@ -7,7 +7,7 @@
     =========================================================*/
     var input = $('.validate-input .input');
 
-    $('.validate-form').on('submit',function(){
+    $('.validate-form').on('submit',() => {
         var check = true;
 
         for(var i=0; i<input.length; i++) {
@@ -21,8 +21,8 @@
     });
 
 
-    $('.validate-form .input').each(function(){
-        $(this).focus(function(){
+    $('.validate-form .input').each(() => {
+        $(this).focus(() => {
            hideValidate(this);
         });
     });
@@ -64,11 +64,11 @@
                     Submit Form
 ========================================================*/
 async function postFormFieldsAsJson({url, formData}) {
+
     // Create an object from the form data entries
     let formDataObject = Object.fromEntries(formData.entries());
     // Format the plain form data as JSON
     let formDataJsonString = JSON.stringify(formDataObject);
-    console.log(formDataJsonString)
     // Set the fetch options (headers, body)
     let fetchOptions = {
       method: "POST",
@@ -79,49 +79,43 @@ async function postFormFieldsAsJson({url, formData}) {
       body: formDataJsonString,
     };
   
-    // Get the response body as JSON.
-    // If the response was not OK, throw an error.
     let res = await fetch(url, fetchOptions);
   
-    // If the response is not ok throw an error (for debugging)
-    if (!res.ok) {
-      let error = await res.text();
-      throw new Error(error);
-    }
-    //If the response was OK, return the response body.
-    return res.json();
-  }
+    // Return the server response.
+    return res;
+}
 
 // Get the form element by id
-const sampleForm = document.getElementById("login-form");
+const sampleForm = document.querySelector(".login-form")
 
 // Add an event listener to the form element and handler for the submit an event.
 sampleForm.addEventListener("submit", async (e) => {
 /*Prevent the default browser behaviour of submitting
-    the form so that you can handle this instead.*/
+the form so that you can handle this instead.*/
 e.preventDefault();
 
 // Get the element attached to the event handler.
-let form = e.currentTarget;
+let form = e.currentTarget
 // Take the URL from the form's `action` attribute.
-let url = form.action;
+let url = form.action
 
 try {
     /*Takes all the form fields and make the field values
     available through a `FormData` instance.*/
-    let formData = new FormData(form);
+    let formData = new FormData(form)
     formData.set.name.perfil
     
     // The `postFormFieldsAsJson()` function in the next step.
-    let responseData = await postFormFieldsAsJson({ url, formData });
+    let res = await postFormFieldsAsJson({ url, formData });
 
-    //Destructure the response data
-    let { serverDataResponse } = responseData;
+    if (res.status == 200) {
+        window.location.replace("/")
+    } else {
+        window.location.reload()
+    }
 
-    //Display the response data in the console (for debugging)
-    console.log(serverDataResponse);
 } catch (error) {
     //If an error occurs display it in the console (for debugging)
     console.error(error);
-}
+    }
 });

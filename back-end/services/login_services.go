@@ -29,7 +29,7 @@ func SignUp(signData models.SignUp) error {
 	_, err := database.DB.Query("insert into users(name, last_name, email, password, area_code, phone, perfil_photo) values('" + signData.Name + "', '" + signData.LastName + "', '" + signData.Email + "', '" + signData.Password + "', '" + signData.AreaCode + "', '" + signData.Phone + "', '" + signData.PerfilPhoto + "')	")
 
 	if err != nil {
-		return errors.New("Erro ao cadastrar.")
+		return errors.New("Error registering data in the database.")
 	}
 
 	return nil
