@@ -8,13 +8,12 @@ import (
 
 func Login(loginData models.Login) error {
 
+	// It locates the password through the email.
 	var password string
-	err := database.DB.Table("users").Select("password").Where("email = " + "'" + loginData.Email + "'").Scan(&password)
+	database.DB.QueryRow("select password from users where email = '" + loginData.Email + "'").Scan(&password)
 
-	if err.Error != nil {
-		return err.Error
-	}
-
+	// Validates if the email of the request body is registered.
+	// If the email is registered, check if the body password is the same as the validated email.
 	if password == "" {
 		return errors.New("Email não cadastrado.")
 	} else if loginData.Password != password {
@@ -26,7 +25,12 @@ func Login(loginData models.Login) error {
 
 func SignUp(signData models.SignUp) error {
 
-	database.DB.Table("users").Create(signData)
+	// Try to insert in database the sign-up datas.
+	_, err := database.DB.Query("insert into users(name, last_name, email, password, area_code, phone, perfil_photo) values('" + signData.Name + "', '" + signData.LastName + "', '" + signData.Email + "', '" + signData.Password + "', '" + signData.AreaCode + "', '" + signData.Phone + "', '" + signData.PerfilPhoto + "')	")
+
+	if err != nil {
+		return errors.New("Error registering data in the database.")
+	}
 
 	return nil
 }
