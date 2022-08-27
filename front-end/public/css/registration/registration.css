@@ -230,11 +230,9 @@ button {
   min-height: 100vh;
 }
 
-body {
-  background-image: url('/img/bg-01.jpg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;;
+body { 
+  background: rgb(206,63,247);
+  background: radial-gradient(circle, rgba(206,63,247,1) 0%, rgba(161,6,245,1) 100%);
 
   font-family: "Open Sans", "Arial", "Helvetica Neue", sans-serif;
   font-weight: 400;
@@ -614,7 +612,7 @@ input {
 }
 
 .input--style-5 {
-  background: #e5e5e5;
+  background-color: white;
   line-height: 50px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -808,11 +806,11 @@ input {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  background: #fff;
+  background-color: rgb(233, 199, 241);
 }
 
 .card-5 {
-  background: #fff;
+  background-color: rgb(233, 199, 241);
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;

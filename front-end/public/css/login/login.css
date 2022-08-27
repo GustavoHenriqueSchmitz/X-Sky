@@ -175,16 +175,14 @@ iframe {
   justify-content: center;
   align-items: center;
   padding: 15px;
-  
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;;
+  background: rgb(206,63,247);
+  background: radial-gradient(circle, rgba(206,63,247,1) 0%, rgba(161,6,245,1) 100%);
 }
 
 
 .wrap-login {
   width: 680px;
-  background: #fff;
+  background-color: rgb(233, 199, 241);
   border-radius: 10px;
   position: relative;
 }
