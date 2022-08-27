@@ -16,6 +16,10 @@ body {
     min-height: 100vh;
 }
 
+button:hover {
+    cursor: pointer;
+}
+
 /*=========================================================
                     Header Config
 =========================================================*/
@@ -75,10 +79,16 @@ header {
 #menu a {
     font-size: 19px;
     color: white;
-    background-color: black;
+    border: 4px solid black;
+    background-color: rgb(157, 0, 255);
     padding: 1% 3%;
     text-decoration: none;
     color: white;
+    transition: 0.3s;
+}
+
+#menu a:hover {
+    background: rgb(215,100,247);
 }
 
 /*=========================================================
@@ -130,6 +140,13 @@ main {
     place-items: center;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
+}
+
+#main-content-image {
+    width: 74%;
+    height: 88%;
+    min-width: 250px;
+    min-height: 200px;
 }
 
 #main-content-whoweare {
@@ -218,21 +235,10 @@ main {
     font-size: 19px;
 }
 
-#main-content-image {
-    width: 74%;
-    height: 88%;
-    min-width: 250px;
-    min-height: 200px;
-}
-
 .main-content-whoare-contentbottom-text {
     text-align: center;
     font-family: Poppins-Medium;
     font-size: 19px;
-}
-
-.main-content-whoare-contentbottom-icons {
-    
 }
 
 /*=========================================================
@@ -379,6 +385,11 @@ footer {
 
 #footer-navigation a {
     color: black;
+    transition: 0.3s;
+}
+
+#footer-navigation a:hover {
+    color: rgb(157, 0, 255);
 }
 
 #copyright {
