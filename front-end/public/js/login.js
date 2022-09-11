@@ -109,9 +109,9 @@ try {
     let res = await postFormFieldsAsJson({ url, formData });
 
     if (res.status == 200) {
-        window.location.replace("/")
+        window.location.replace("/front-end/templates/index.html")
     } else {
-        window.location.reload()
+        window.location.replace("/front-end/templates/index.html")
     }
 
 } catch (error) {

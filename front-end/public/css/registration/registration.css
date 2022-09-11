@@ -231,7 +231,7 @@ button {
 }
 
 body {
-  background-image: url('/img/bg-01.jpg');
+  background-image: url('/front-end/public/img/bg-01.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;;

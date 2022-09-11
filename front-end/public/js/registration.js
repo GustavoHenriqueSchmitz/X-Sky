@@ -59,9 +59,9 @@ sampleForm.addEventListener("submit", async (e) => {
     let res = await postFormFieldsAsJson({ url, formData });
 
     if (res.status == 201) {
-      window.location.replace("/login")
+      window.location.replace("/front-end/templates/login/login.html")
     } else {
-      window.location.reload()
+      window.location.replace("/front-end/templates/login/login.html")
     }
 
   } catch (error) {
