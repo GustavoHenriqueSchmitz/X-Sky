@@ -184,31 +184,31 @@
     justify-content: space-around;
   }
 
-  #main-content-help {
+  #main-content-contact {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
   }
 
-  #main-content-help-left {
+  #main-content-contact-left {
     grid-template-columns: 1fr;
     grid-template-rows: 60% 40%;
   }
 
-  #main-content-help-left img {
-    height: 65%;
-    width: 20%;
+  #main-content-contact-left img {
+    height: 90%;
+    width: 25%;
   }
 
   /*=========================================================
                   Texts, titles and images
   =========================================================*/
   .titles {
-    font-size: 32px;
+    font-size: 30px;
   }
 
   .texts {
     text-align: center;
-    font-size: 18px;
+    font-size: 17px;
   }
 
   #main-content-image {
@@ -222,68 +222,99 @@
     grid-row: 1;
   }
 
-  .main-content-whoare-contentbottom-images {
+  .main-content-whoare-contentbottom-icons {
     grid-row: 2;
-    height: 15%;
-    width: 16%;
   }
 
   .main-content-whoare-contentbottom-text {
     grid-row: 3;
-    font-size: 19px;
+    font-size: 17px;
   }
 
   /*=========================================================
                             Forms
   =========================================================*/
-  #main-content-help-right-form-base {
+  #main-content-contact-right-form-base {
     display: grid;
     grid-template-rows: 22% 60% 18%;
     grid-template-columns: 1fr;
   }
 
-  #main-content-help-right-form-base-nameandemail {
+  #main-content-contact-right-form-base-nameandemail {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  #main-content-help-right-form-base-nameandemail input {
+  #main-content-contact-right-form-base-nameandemail input {
     height: 35%;
-    width: 92%;
+    width: 80%;
+  }
+
+  #main-content-contact-right-form-base-message textarea {
+    width: 80%;
   }
 }
 
 /*=========================================================
         Media queries para dispositivos verticais
 =========================================================*/
-@media (max-width: 800px) {
+@media (max-width: 700px) {
 
   #main-content-image {
-    width: 74%;
-    height: 86%;
+    width: 50%;
+    height: 84%;
+  }
+
+  .titles {
+    font-size: 20px;
+  }
+
+  .main-content-whoare-contentbottom-text {
+    font-size: 16px;
+  }
+
+  #main-content-contact-left img {
+    height: 80%;
+    width: 35%;
+  }
+
+  .texts {
+    text-align: center;
+    font-size: 16px;
+  }
 }
+
+@media (max-width: 450px) {
+
+  .texts {
+    text-align: center;
+    font-size: 14px;
+  }
 
   .titles {
     font-size: 17px;
   }
 
   .main-content-whoare-contentbottom-text {
-    font-size: 15px;
+    font-size: 14px;
   }
 
-  #main-content-help-left img {
-    height: 65%;
-    width: 30%;
-  }
-
-  .texts {
-    text-align: center;
-    font-size: 15px;
-  }
+  .menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: black;
+  position: absolute;
+  height: 10px;
+  width: 90px;
+  max-width: 105px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
 }
 
-@media (max-height: 500px) {
+@media (max-height: 400px) {
   main {
     height: 300vh;
     min-height: 4400px;
