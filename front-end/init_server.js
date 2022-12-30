@@ -7,7 +7,6 @@ const port = process.env.PORT || 3000
 
 // Define paths for Express conifg
 const publicDir = path.join(__dirname, '/public')
-const vendorDir = path.join(__dirname, '/vendor')
 const fontsDir = path.join(__dirname, '/fonts')
 const templatesPath = path.join(__dirname, '/templates')
 const partialsPath = path.join(__dirname, '/templates')
@@ -19,7 +18,6 @@ hbs.registerPartials(partialsPath)
 
 // Setup static directory to serve
 app.use(express.static(publicDir))
-app.use(express.static(vendorDir))
 app.use(express.static(fontsDir))
 
 // Routes

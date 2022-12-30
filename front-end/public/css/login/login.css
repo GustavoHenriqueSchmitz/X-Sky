@@ -187,23 +187,28 @@ iframe {
   position: relative;
 }
 
-
 /*=======================================================
                           Form
 =========================================================*/
 
 .login-form {
+  padding: 5%;
   width: 100%;
 }
 
 .login-form-title {
   width: 100%;
+  margin-bottom: 5%;
   display: block;
   font-family: Montserrat-Medium;
   font-size: 39px;
   color: #555555;
   line-height: 1.2;
   text-align: center;
+}
+
+.input-label {
+  margin: 3% 0 1% 0;
 }
 
 /*=========================================================
@@ -379,6 +384,7 @@ iframe {
 =========================================================*/
 .container-login-form-btn {
   width: 100%;
+  margin: 4% 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
