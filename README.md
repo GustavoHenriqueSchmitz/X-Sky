@@ -1,47 +1,44 @@
 # X-Sky
 
-Este projeto é um desafio fornecido pela **ELITI**.
+It’s a website based on a fictional company, containing a homepage, registration page, and login page.
 
-É um site baseado em uma empresa fictícia.
-Contendo uma página inicial, cadastro e login.
+## Structure
 
-## Estrutura
+### Website
 
-### Site
+- Main page
+- Login page
+- Registration page
 
-* Página principal
-* Página de login
-* Página de cadastro
+### Technologies
 
-### Tecnologias
+- HTML5
+- CSS3
+- Java Script
+- Golang
+- Node.js 
+- PostgresSQL
+- Docker Compose
 
-* HTML5
-* CSS3
-* Java Script
-* Golang
-* Node JS 
-* PostgresSQL
-* Docker-compose
+## Project Startup Guide
 
-## Guia de inicialização do projeto 
+**1** - Install the necessary technologies.
 
-**1** - Instale as Tecnologias necessárias.
+ - Node JS: https://nodejs.org/en/download/
+ - Golang: https://go.dev/dl/
+ - Docker-compose: https://docs.docker.com/compose/install/
 
- * Node JS: https://nodejs.org/en/download/
- * Golang: https://go.dev/dl/
- * Docker-compose: https://docs.docker.com/compose/install/
-
-**2** - Clone o repositório `git clone "https://github.com/GustavoHenriqueSchmitz/X-Sky.git"`
+**2** - Clone the repository `git clone "https://github.com/GustavoHenriqueSchmitz/X-Sky.git"`
 
 ### Back-end
 
-**1** - Abra um terminal, navegue até a pasta **back-end** do projeto.
+**1** - Open a terminal, navigate to the back-end folder of the project.
 
-**2** - Execute `sudo docker-compose up`, e espere o container ser inicializado.
+**2** - Run `sudo docker-compose up`, and wait for the container to initialize.
 
-**3** - Em outro terminal, navegue até a mesma pasta e execute `go run main.go`
+**3** - In another terminal, navigate to the same folder and run `go run main.go`
 
-**4** Código para criação da tabela do banco de dados.
+**4** Code to create the database table.
 
 ```
 create table users (
@@ -58,15 +55,22 @@ create table users (
 
 ### Front-end
 
-**1** - Abra um terminal, navegue até a pasta **front-end** do projeto.
+**1** - Open a terminal, navigate to the front-end folder of the project.
 
-**2** - E execute `node init_server.js`
+**2** - Run `node init_server.js`
 
-## Informações para uso
+## Usage Information
 
- * Front-end inicializado na porta 3000.
- * Back-end inicializado na porta 5000.
- * Banco de dados Postgres inicializado na porta 5432.
- * Usuário do banco de dados: xsky
- * Senha do banco de dados: xsky
- * Nome do banco de dados: X-Sky
+- Front-end initialized on port 3000.
+- Back-end initialized on port 5000.
+- PostgreSQL database initialized on port 5432.
+- Database user: xsky
+- Database password: xsky
+- Database name: X-Sky
+
+## Author
+**Gustavo Henrique Schmitz**
+
+**Linkedin:** https://www.linkedin.com/in/gustavo-henrique-schmitz  
+**Portfolio:** https://gustavohenriqueschmitz.com  
+**Email:** gustavohenriqueschmitz568@gmail.com  
