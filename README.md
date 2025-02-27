@@ -2,6 +2,9 @@
 
 It’s a website based on a fictional company, containing a homepage, registration page, and login page.
 
+## Project Video
+[![Xsky System Demo](https://img.youtube.com/vi/Z2GD6-xEVr0/0.jpg)](https://www.youtube.com/watch?v=Z2GD6-xEVr0)
+
 ## Structure
 
 ### Website
